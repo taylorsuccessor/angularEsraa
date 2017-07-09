@@ -5,12 +5,18 @@ $sql = "SELECT * FROM login WHERE email = '$data->email' and  password= '$data->
 $result = $conn->query($sql);
 if ($result->num_rows == 1) {
   // correct login
-	echo '<script>window.alert("This correct")</script>';
-    }
- else {
-   // incorrect login
-		echo '<script>window.alert("This not correct")</script>';
+if($data->name){
+	$qry = $conn->query($sql);
+
 }
+
+
+ }else {
+
+echo 'not sucss';
+} 
+
+
 
 $conn->close();
 ?>

@@ -1,0 +1,33 @@
+
+<div class="panel panel-default" *ngIf=product>
+  <div class="panel-heading">Product detail Form : You can see the detail information of an Product in this page of the shop Apps.</div>
+  <div class="panel-body">
+      <form class="form-horizontal" >
+        <div class="form-group">
+          <label for="emp_name" class="col-sm-2 control-label">Product Name : </label>
+          <div class="col-sm-9">
+            <p class="form-control">{{product.pro_name}}</p> 
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="position" class="col-sm-2 control-label">Product price : </label>
+          <div class="col-sm-9">
+          <p class="form-control">{{product.price}}</p>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="id" class="col-sm-2 control-label">Shop ID : </label>
+          <div class="col-sm-9">
+            <p class="form-control">{{product.shop_id}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-8">
+            <!--<button type="submit" class="btn btn-info" (click)="goBack()">Cancel</button>-->
+             <a  class="btn btn-info" (click)="goBack()">Cancel</a>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

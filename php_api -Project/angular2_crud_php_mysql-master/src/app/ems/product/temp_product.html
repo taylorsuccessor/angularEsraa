@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Production Name</td>
+      <td>Price</td>  
+            <td>Shop ID</td>    
+      <td width=275 align="center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let product of productes">
+        <td>{{product.pro_name}}</td>
+        <td>{{product.price}}</td>
+          <td>{{product.shop_id}}</td>
+        
+        <td width=275> 
+            <a class="btn btn-info" routerLink="/pro_show/{{product.pro_id}}">Detail</a> 
+            <a class="btn btn-success" routerLink="/pro_edit/{{product.pro_id}}">Edit</a>
+         <a class="btn btn-danger" (click)="deleteProduct(product.pro_id)">Delete</a>
+                         <a class="btn btn-info" routerLink="/pro_add">Add</a> 
+        </td>
+     </tr>
+    
+  </tbody>
+ 
+</table>
+  <a class="btn btn-success" routerLink="/shop">Back</a>

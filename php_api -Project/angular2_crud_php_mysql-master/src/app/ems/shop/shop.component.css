@@ -1,0 +1,12 @@
+.btn, .btn-info, .btn-success,.btn-danger,{
+    width:75px;
+    margin-left: 7px;
+}
+
+.btn-infop {
+
+    color: #fff;
+    background-color: #FFD700;
+    border-color: #DAA520;
+
+}

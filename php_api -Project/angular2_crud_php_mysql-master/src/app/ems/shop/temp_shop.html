@@ -1,0 +1,34 @@
+
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Email</td>      
+      <td width=275 align="center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let shop of shopes"  >
+        <td>{{shop.name}}</td>
+        <td>{{shop.email}}</td>
+        
+        <td width=275> 
+            <a class="btn btn-info" routerLink="/show/{{shop.shop_id}}">Detail</a> 
+            <a class="btn btn-success" routerLink="/edit/{{shop.shop_id}}">Edit</a>
+            <a class="btn btn-danger" (click)="deleteShop(shop.shop_id)">Delete</a>
+               <a  class="btn-infop" routerLink="/product/{{shop.shop_id}}">Product</a> 
+                <a class="btn btn-info" routerLink="/add">Add</a> 
+        </td>
+     </tr>
+    
+  </tbody>
+ 
+</table>
+<!--   <a class="btn btn-danger" routerLink="/login">Logout</a>  -->
+
+
+
+
+

@@ -17,9 +17,9 @@ export class UserService {
       .map(()=>"");
   }
 
-  //loginUser(value) {
-   //return this._http.get("http://localhost/api_json/login_user.php",info)
-   //.map(()=>"");
-  //}
+  loginUser(info) {
+   return this._http.get("http://localhost/api_json/login_user.php",info)
+   .map(()=>"");
+  }
 
 }

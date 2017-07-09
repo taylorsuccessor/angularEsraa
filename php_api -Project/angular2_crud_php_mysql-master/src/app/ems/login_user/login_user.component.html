@@ -5,7 +5,7 @@
 <!-- <section  class="login-register" id="wrapper" > -->
   <div class="login-box">
     <div class="white-box">
-      <form class="form-horizontal form-material" id="loginform" #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+      <form class="form-horizontal form-material" id="loginform" (submit)="loginUser()">
         <h3 class="box-title m-b-20">Sign In</h3>
      <!--
         <div class="form-group ">
@@ -20,7 +20,7 @@
           
             <input #emailInput="ngModel"
              pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
-             [(ngModel)]="model.email" type="text" name="email" class="form-control" placeholder="Email@email.com"/>
+             [(ngModel)]="model.email" type="text" name="email" class="form-control" placeholder="Email" ngModel/>
 
              <div class="alert alert-danger" *ngIf="emailInput.errors && (emailInput.dirty || emailInput.touched)">
                 <span [hidden]="!emailInput.errors.pattern">
@@ -35,7 +35,7 @@
 
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" type="password" required="" placeholder="Password" [(ngModel)]="model.password" name="password">
+            <input class="form-control" type="password" required="" placeholder="Password" [(ngModel)]="model.password" name="password" ngModel>
           </div>
         </div>
         <div class="form-group">

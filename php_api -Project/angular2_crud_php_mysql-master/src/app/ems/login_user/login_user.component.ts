@@ -21,28 +21,15 @@ export class LoginUserComponent implements OnInit {
 
   
  
-  
-  //loginUser(value: any){
-   //this.userService
-    //  .loginUser(this.model)
-     
-   //   .subscribe(()=> this.router.navigate(['/shop']));
+  model = new User();
+  loginUser(){
+  this.userService
+    .loginUser(this.model)
+  .subscribe(()=> this.router.navigate(['/shop']));  
 
-  //this.loading = true;
-
-     //  .subscribe(
-        //        data => {
-              //     this.router.navigate(['/shop']);
-             // },
-        //       error => {
-         //           this.error(error);
-       //          this.loading = false;
-     //       });
-
-
-   //   console.log(value);
- // }
+  }
  
+  
    goBack(){
     this.router.navigate(['/adduser']);
   }

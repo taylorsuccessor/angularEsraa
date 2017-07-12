@@ -22,6 +22,7 @@ import { ShowProductComponent } from './ems/pro_show/pro_show.component';
 import { ProductService } from './product.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { ProductService } from './product.service';
     AddProductComponent,
     EditProductComponent,
    ShowProductComponent,
+   
    
 
   ],

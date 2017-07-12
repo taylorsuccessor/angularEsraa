@@ -28,6 +28,7 @@ const routes: Routes = [
  {path:"pro_add", component:AddProductComponent},
   {path:"pro_edit/:id", component:EditProductComponent},
   {path:"pro_show/:id", component:ShowProductComponent},
+
    
 ];
 @NgModule({

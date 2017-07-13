@@ -1,0 +1,18 @@
+                          
+ <div  *ngIf=shop>
+  <form class="form-horizontal" role="form" (submit)="updateShop()">
+        <label class="control-label col-md-3">Shop Name:</label>
+            <p class="form-control-static" >   {{shop.name}}</p>
+       <label class="control-label col-md-3">Shop Email:</label>
+             <p class="form-control-static">{{shop.email}} </p>
+       <label class="control-label col-md-3">Shop ID:</label>
+             <p class="form-control-static">{{shop.shop_id}} </p>
+    <button type="button" (click)="goBack()" class="btn btn-default">Cancel</button>
+  </form>
+</div>                              
+
+
+                               
+              
+
+             

@@ -1,0 +1,38 @@
+ 
+ <table class="table product-overview">
+    <thead>
+      <tr>
+     <th>Name</th>
+     <th>Email</th>                  
+     <th>Actions</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr  *ngFor="let shop of shopes">
+      <td>{{shop.name}}</td>
+      <td>{{shop.email}}</td>
+      <td>
+       <a routerLink="/edit/{{shop.shop_id}}" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit" >
+         <i class="ti-marker-alt"></i></a>            
+       <a routerLink="/show/{{shop.shop_id}}" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+         <i class="ti-zoom-in"></i></a> 
+        <a (click)="deleteShop(shop.shop_id)" class="text-inverse" title="Delete" data-toggle="tooltip">
+         <i class="ti-trash" ></i></a> 
+      </td>
+       </tr>
+ </tbody>
+ </table>
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
